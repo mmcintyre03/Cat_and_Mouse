@@ -12,9 +12,10 @@ The Mouse.java file is used to move the mice around and remove them from the cit
 
 Executing the code
 To execute the code open all of the files and paste the following into the terminal to compile the files. 
-javac -classpath ".;./Plotter.jar;./junit-platform-console-standalone-1.7.0-M1.jar" *.java for Windows
 
-javac -classpath ".:./Plotter.jar:./junit-platform-console-standalone-1.7.0-M1.jar" *.java for Mac
+For Windows: javac -classpath ".;./Plotter.jar;./junit-platform-console-standalone-1.7.0-M1.jar" *.java 
+
+For Mac: javac -classpath ".:./Plotter.jar:./junit-platform-console-standalone-1.7.0-M1.jar" *.java 
 
 After the files are complied then run the following lines to run the program. 
 
