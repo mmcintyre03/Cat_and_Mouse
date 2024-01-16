@@ -60,6 +60,11 @@ public class City{
         creaturesToAdd.add(new Mouse(rand.nextInt(HEIGHT),rand.nextInt(WIDTH),this,rand));
     }
     
+    public void childMouse(int x, int y, Random rand){
+        Mouse child = new Mouse(x, y, this, rand); //
+        creaturesToAdd.add(child);
+    }
+    
     public void addCat(){
         
         creaturesToAdd.add(new Cat(rand.nextInt(HEIGHT),rand.nextInt(WIDTH),this,rand));
