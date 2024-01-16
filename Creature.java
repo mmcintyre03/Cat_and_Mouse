@@ -1,7 +1,7 @@
 import java.util.Random;
 
 //This method was provided to me by me professor 
-public class Creature {
+public abstract class Creature {
 
     
     // Note, that output should be in (x,y) format as
@@ -80,8 +80,8 @@ public class Creature {
         rand = rnd;
         lab = LAB_GRAY;
         dir = rand.nextInt(NUM_DIRS);
-        dead= false;
-        stepLen=1;
+        dead = false;
+        stepLen = 1;
     }
 
     public boolean isDead(){ return dead;}
@@ -119,12 +119,19 @@ public class Creature {
     public void randomTurn() {
         this.dir = rand.nextInt(4);
     }
-
     
     //TODO: add the methods below to the appropriate class(es)
-    //  void step()
-    //  void takeAction()
+    public void step(){
+       // final int[] dc = { 0, 1, 0, -1}, dr = {1, 0, -1, 0 };
+        point.x =  (point.x + stepLen * dirX[this.dir] + City.WIDTH) % City.WIDTH;
+        point.y = (point.y + stepLen * dirY[this.dir] + City.HEIGHT) % City.HEIGHT;
+       // this.point.x += dirX[this.dir];
+       // this.point.y += dirY[this.dir];
+      }
 
+    public abstract void takeAction(); 
+    //public abstract void chaseMouse(Creature m);
+    //public abstract void findMouse(Creature m);
 
     
     //To string so you can output a creature to the plotter
@@ -132,5 +139,4 @@ public class Creature {
         //output in (x,y) format
         return ""+this.point.x+" "+this.point.y+" "+lab;
     }
-
 }
