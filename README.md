@@ -16,4 +16,8 @@ javac -classpath ".;./Plotter.jar;./junit-platform-console-standalone-1.7.0-M1.j
 
 javac -classpath ".:./Plotter.jar:./junit-platform-console-standalone-1.7.0-M1.jar" *.java for Mac
 
-After the files are complied then run the following lines to start the program. 
+After the files are complied then run the following lines to run the program. 
+
+java Simulator 8 2 0 1000 | java -jar Plotter.jar
+
+The first number(8) is the number of cats that will be created, the second number is the number of mice, the third is the number of Zombie cats(This was not a requirement of our project), the last is the number of rounds the simulation will last.
